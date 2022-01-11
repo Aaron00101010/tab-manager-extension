@@ -1,9 +1,9 @@
 import { html, TemplateResult } from 'lit';
-import '../src/tab-manager-extendsion.js';
+import '../src/tab-manager-extension.js';
 
 export default {
-  title: 'TabManagerExtendsion',
-  component: 'tab-manager-extendsion',
+  title: 'TabManagerExtension',
+  component: 'tab-manager-extension',
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -20,8 +20,14 @@ interface ArgTypes {
   backgroundColor?: string;
 }
 
-const Template: Story<ArgTypes> = ({ title, backgroundColor = 'white' }: ArgTypes) => html`
-  <tab-manager-extendsion style="--tab-manager-extendsion-background-color: ${backgroundColor}" .title=${title}></tab-manager-extendsion>
+const Template: Story<ArgTypes> = ({
+  title,
+  backgroundColor = 'white',
+}: ArgTypes) => html`
+  <tab-manager-extension
+    style="--tab-manager-extension-background-color: ${backgroundColor}"
+    .title=${title}
+  ></tab-manager-extension>
 `;
 
 export const App = Template.bind({});

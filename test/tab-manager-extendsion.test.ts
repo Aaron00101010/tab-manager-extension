@@ -1,13 +1,15 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 
-import { TabManagerExtendsion } from '../src/TabManagerExtendsion.js';
-import '../src/tab-manager-extendsion.js';
+import { TabManagerExtension } from '../src/tab-manager-extension';
+import '../src/tab-manager-extension.js';
 
-describe('TabManagerExtendsion', () => {
-  let element: TabManagerExtendsion;
+describe('TabManagerExtension', () => {
+  let element: TabManagerExtension;
   beforeEach(async () => {
-    element = await fixture(html`<tab-manager-extendsion></tab-manager-extendsion>`);
+    element = await fixture(
+      html`<tab-manager-extension></tab-manager-extension>`
+    );
   });
 
   it('renders a h1', () => {

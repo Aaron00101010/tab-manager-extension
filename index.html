@@ -1,28 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="Description" content="Put your description here." />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #ededed;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html[theme='dark'] {
+        color-scheme: dark;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" src="./src/theme/default.css" />
+    <link rel="stylesheet" src="./src/theme/dark.css" />
+    <title>tab-manager-extension</title>
+  </head>
 
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
-  </style>
-  <title>tab-manager-extendsion</title>
-</head>
+  <body>
+    <tab-manager-extension></tab-manager-extension>
 
-<body>
-  <tab-manager-extendsion></tab-manager-extendsion>
-
-  <script type="module" src="./out-tsc/src/tab-manager-extendsion.js"></script>
-</body>
-
+    <script type="module" src="./out-tsc/src/tab-manager-extension.js"></script>
+  </body>
 </html>
