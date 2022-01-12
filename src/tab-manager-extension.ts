@@ -1,12 +1,10 @@
 import { LitElement, html, css } from 'lit';
 import { property, query, state, customElement } from 'lit/decorators.js';
+import './utils/vaddin';
 import { ColorScheme } from './utils/color-scheme';
-import type { TabGroup } from './typing';
-import '@vaadin/icon';
-import '@vaadin/vaadin-lumo-styles/vaadin-iconset';
-import '@vaadin/vaadin-lumo-styles/sizing';
+
 import './setting-sidebar';
-import './tab-group-item';
+import './tab-group';
 
 enum ThemeClassName {
   dark = 'dark-theme',
@@ -38,47 +36,28 @@ export class TabManagerExtension extends LitElement {
         'Segoe UI Symbol', 'Noto Color Emoji';
     }
     :host {
-      --gray-50: #f5f8fd;
-      --gray-100: #f1f5fb;
-      --gray-150: #eaf0f8;
-      --gray-200: #e0e9f4;
-      --gray-250: #d6e0ed;
-      --gray-300: #bbc9dc;
-      --gray-350: #a2b4cb;
-      --gray-400: #8396af;
-      --gray-450: #657892;
-      --gray-500: #576b85;
-      --gray-550: #4d5e74;
-      --gray-600: #3f4d62;
-      --gray-650: #2e3c50;
-      --gray-700: #232e3c;
-      --gray-750: #1b2633;
-      --gray-800: #121a24;
-      --gray-900: #0d1219;
-
-      --background-color: #fff;
-      --border-color: var(--gray-200);
-      --hover-background: var(--gray-150);
-    }
-    :host([theme='dark']) {
-      --background-color: #fff;
+      --background-color: var(--lumo-base-color);
+      --border-color: var(--lumo-contrast-20pct);
+      --hover-background: var(--lumo-contrast-20pct);
     }
 
     .container {
       height: 100vh;
-      color: var(--gray-600);
+      color: var(--lumo-body-text-color);
       background-color: var(--background-color);
     }
     header {
       font-weight: bold;
-      font-size: 16px;
-      padding: 1em;
+      font-size: var(--lumo-font-size-l);
+      font-weight: normal;
+      padding: var(--lumo-space-m);
       border-bottom: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
       user-select: none;
       height: 60px;
       box-sizing: border-box;
+      color: var(--lumo-header-text-color);
     }
     main {
       flex-grow: 1;
@@ -98,7 +77,7 @@ export class TabManagerExtension extends LitElement {
       width: 32px;
     }
     .icon {
-      border-radius: 4px;
+      border-radius: var(--lumo-border-radius-m);
       transition: background-color 0.2s;
       cursor: pointer;
     }
@@ -106,40 +85,14 @@ export class TabManagerExtension extends LitElement {
     .icon.active {
       background-color: var(--hover-background);
     }
+
+    .tabs-container {
+      padding: var(--lumo-space-m);
+    }
   `;
 
   @state()
   private isSettingOpen: boolean = false;
-
-  @state()
-  private tabsGroupData: TabGroup[] = [
-    {
-      name: 'test1',
-      tabs: [
-        {
-          name: '233',
-          url: 'https://www.baidu.com',
-        },
-        {
-          name: '666',
-          url: 'https://www.google.com',
-        },
-      ],
-    },
-    {
-      name: 'test1a',
-      tabs: [
-        {
-          name: '233a',
-          url: 'https://www.baidu.com',
-        },
-        {
-          name: '666a',
-          url: 'https://www.google.com',
-        },
-      ],
-    },
-  ];
 
   @query('#setting-button')
   private settingIcon!: Element;
@@ -174,11 +127,7 @@ export class TabManagerExtension extends LitElement {
         </header>
         <main>
           <div class="tabs-container">
-            ${this.tabsGroupData.length === 0
-              ? html`No Data`
-              : this.tabsGroupData.map(
-                  i => html`<tabs-group-item></tabs-group-item>`
-                )}
+            <tab-group></tab-group>
           </div>
           <setting-sidebar ?open=${this.isSettingOpen}></setting-sidebar>
         </main>

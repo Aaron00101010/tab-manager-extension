@@ -1730,6 +1730,11 @@
   dependencies:
     "@sinonjs/fake-timers" "^7.1.0"
 
+"@types/sortablejs@^1.10.7":
+  version "1.10.7"
+  resolved "http://registry.m.jd.com/@types/sortablejs/download/@types/sortablejs-1.10.7.tgz#ab9039c85429f0516955ec6dbc0bb20139417b15"
+  integrity sha1-q5A5yFQp8FFpVextvAuyATlBexU=
+
 "@types/trusted-types@^2.0.2":
   version "2.0.2"
   resolved "https://registry.npmmirror.com/@types/trusted-types/download/@types/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
@@ -6032,6 +6037,11 @@ slice-ansi@^5.0.0:
   dependencies:
     ansi-styles "^6.0.0"
     is-fullwidth-code-point "^4.0.0"
+
+sortablejs@^1.14.0:
+  version "1.14.0"
+  resolved "http://registry.m.jd.com/sortablejs/download/sortablejs-1.14.0.tgz#6d2e17ccbdb25f464734df621d4f35d4ab35b3d8"
+  integrity sha1-bS4XzL2yX0ZHNN9iHU811Ks1s9g=
 
 source-map-support@~0.5.12, source-map-support@~0.5.20:
   version "0.5.21"

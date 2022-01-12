@@ -4,6 +4,11 @@ export interface TabItem {
 }
 
 export interface TabGroup {
+  id: string;
   name: string;
   tabs: TabItem[];
+}
+
+declare global {
+  interface Sortable {}
 }

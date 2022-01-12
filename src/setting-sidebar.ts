@@ -12,8 +12,9 @@ export class SettingSidebar extends LitElement {
       top: 0;
       right: -300px;
       transition: right 0.2s;
-      padding: 20px;
+      padding: var(--lumo-space-m);
       box-sizing: border-box;
+      background-color: var(--lumo-base-color);
     }
     :host([open]) {
       right: 0;
