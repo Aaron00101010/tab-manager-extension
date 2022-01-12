@@ -1572,6 +1572,21 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/fs-extra@^8.0.1":
+  version "8.1.2"
+  resolved "http://registry.m.jd.com/@types/fs-extra/download/@types/fs-extra-8.1.2.tgz#7125cc2e4bdd9bd2fc83005ffdb1d0ba00cca61f"
+  integrity sha1-cSXMLkvdm9L8gwBf/bHQugDMph8=
+  dependencies:
+    "@types/node" "*"
+
+"@types/glob@^7.1.1":
+  version "7.2.0"
+  resolved "http://registry.m.jd.com/@types/glob/download/@types/glob-7.2.0.tgz#bc1b5bf3aa92f25bd5dd39f35c57361bdce5b2eb"
+  integrity sha1-vBtb86qS8lvV3TnzXFc2G9zlsus=
+  dependencies:
+    "@types/minimatch" "*"
+    "@types/node" "*"
+
 "@types/hast@^2.0.0":
   version "2.3.4"
   resolved "https://registry.npmmirror.com/@types/hast/download/@types/hast-2.3.4.tgz#8aa5ef92c117d20d974a82bdfb6a648b08c0bafc"
@@ -1655,6 +1670,11 @@
   version "1.3.2"
   resolved "https://registry.npmmirror.com/@types/mime/download/@types/mime-1.3.2.tgz?cache=0&sync_timestamp=1637283985461&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fmime%2Fdownload%2F%40types%2Fmime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha1-k+Jb+e51/g/YC1lLxP6w6GIRG1o=
+
+"@types/minimatch@*":
+  version "3.0.5"
+  resolved "http://registry.m.jd.com/@types/minimatch/download/@types/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
+  integrity sha1-EAHMXmo3BLg8I2An538vWOoBD0A=
 
 "@types/mocha@^8.2.0":
   version "8.2.3"
@@ -2770,6 +2790,11 @@ color-name@~1.1.4:
   resolved "https://registry.npmmirror.com/color-name/download/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=
 
+colorette@^1.1.0:
+  version "1.4.0"
+  resolved "http://registry.m.jd.com/colorette/download/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
+  integrity sha1-UZD7uHJ2JZqGrXAL/yxtb6o/ykA=
+
 colorette@^2.0.16:
   version "2.0.16"
   resolved "https://registry.npmmirror.com/colorette/download/colorette-2.0.16.tgz?cache=0&sync_timestamp=1633676775371&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcolorette%2Fdownload%2Fcolorette-2.0.16.tgz#713b9af84fdb000139f04546bd4a93f62a5085da"
@@ -3592,7 +3617,7 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.npmmirror.com/fast-deep-equal/download/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha1-On1WtVnWy8PrUSMlJE5hmmXGxSU=
 
-fast-glob@^3.1.1, fast-glob@^3.2.9:
+fast-glob@^3.0.3, fast-glob@^3.1.1, fast-glob@^3.2.9:
   version "3.2.10"
   resolved "https://registry.npmmirror.com/fast-glob/download/fast-glob-3.2.10.tgz#2734f83baa7f43b7fd41e13bc34438f4ffe284ee"
   integrity sha512-s9nFhFnvR63wls6/kM88kQqDhMu0AfdjqouE2l5GVQPbqLgyFjjU5ry/r2yKsJxpb9Py1EYNqieFrmMaX4v++A==
@@ -3692,6 +3717,15 @@ fs-constants@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/fs-constants/download/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha1-a+Dem+mYzhavivwkSXue6bfM2a0=
+
+fs-extra@^8.1.0:
+  version "8.1.0"
+  resolved "http://registry.m.jd.com/fs-extra/download/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
+  integrity sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
 
 fs-extra@^9.0.1:
   version "9.1.0"
@@ -3814,6 +3848,20 @@ globals@^13.6.0, globals@^13.9.0:
   integrity sha1-TXM3YDBCMKAILtluIeXFZfiYCJ4=
   dependencies:
     type-fest "^0.20.2"
+
+globby@10.0.1:
+  version "10.0.1"
+  resolved "http://registry.m.jd.com/globby/download/globby-10.0.1.tgz#4782c34cb75dd683351335c5829cc3420e606b22"
+  integrity sha1-R4LDTLdd1oM1EzXFgpzDQg5gayI=
+  dependencies:
+    "@types/glob" "^7.1.1"
+    array-union "^2.1.0"
+    dir-glob "^3.0.1"
+    fast-glob "^3.0.3"
+    glob "^7.1.3"
+    ignore "^5.1.1"
+    merge2 "^1.2.3"
+    slash "^3.0.0"
 
 globby@11.0.4:
   version "11.0.4"
@@ -4148,7 +4196,7 @@ ignore@^4.0.6:
   resolved "https://registry.npmmirror.com/ignore/download/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha1-dQ49tYYgh7RzfrrIIH/9HvJ7Jfw=
 
-ignore@^5.1.4, ignore@^5.1.8, ignore@^5.2.0:
+ignore@^5.1.1, ignore@^5.1.4, ignore@^5.1.8, ignore@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npmmirror.com/ignore/download/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
@@ -4360,6 +4408,11 @@ is-plain-obj@^2.0.0:
   resolved "https://registry.npmmirror.com/is-plain-obj/download/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
   integrity sha1-ReQuN/zPH0Dajl927iFRWEDAkoc=
 
+is-plain-object@^3.0.0:
+  version "3.0.1"
+  resolved "http://registry.m.jd.com/is-plain-object/download/is-plain-object-3.0.1.tgz#662d92d24c0aa4302407b0d45d21f2251c85f85b"
+  integrity sha1-Zi2S0kwKpDAkB7DUXSHyJRyF+Fs=
+
 is-potential-custom-element-name@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/is-potential-custom-element-name/download/is-potential-custom-element-name-1.0.1.tgz#171ed6f19e3ac554394edf78caa05784a45bebb5"
@@ -4557,6 +4610,13 @@ json5@^2.1.2, json5@^2.2.0:
   integrity sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=
   dependencies:
     minimist "^1.2.5"
+
+jsonfile@^4.0.0:
+  version "4.0.0"
+  resolved "http://registry.m.jd.com/jsonfile/download/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
+  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  optionalDependencies:
+    graceful-fs "^4.1.6"
 
 jsonfile@^6.0.1:
   version "6.1.0"
@@ -4998,7 +5058,7 @@ merge-stream@^2.0.0:
   resolved "https://registry.npmmirror.com/merge-stream/download/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
   integrity sha1-UoI2KaFN0AyXcPtq1H3GMQ8sH2A=
 
-merge2@^1.3.0, merge2@^1.4.1:
+merge2@^1.2.3, merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmmirror.com/merge2/download/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha1-Q2iJL4hekHRVpv19xVwMnUBJkK4=
@@ -5868,6 +5928,17 @@ rimraf@3.0.2, rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
+rollup-plugin-copy@^3.4.0:
+  version "3.4.0"
+  resolved "http://registry.m.jd.com/rollup-plugin-copy/download/rollup-plugin-copy-3.4.0.tgz#f1228a3ffb66ffad8606e2f3fb7ff23141ed3286"
+  integrity sha1-8SKKP/tm/62GBuLz+3/yMUHtMoY=
+  dependencies:
+    "@types/fs-extra" "^8.0.1"
+    colorette "^1.1.0"
+    fs-extra "^8.1.0"
+    globby "10.0.1"
+    is-plain-object "^3.0.0"
+
 rollup-plugin-terser@^7.0.0, rollup-plugin-terser@^7.0.2:
   version "7.0.2"
   resolved "https://registry.npmmirror.com/rollup-plugin-terser/download/rollup-plugin-terser-7.0.2.tgz#e8fbba4869981b2dc35ae7e8a502d5c6c04d324d"
@@ -6679,6 +6750,11 @@ unist-util-visit@^1.1.3:
   integrity sha1-RySqqEhububibX/zyGhZYNVgseM=
   dependencies:
     unist-util-visit-parents "^2.0.0"
+
+universalify@^0.1.0:
+  version "0.1.2"
+  resolved "http://registry.m.jd.com/universalify/download/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
+  integrity sha1-tkb2m+OULavOzJ1mOcgNwQXvqmY=
 
 universalify@^2.0.0:
   version "2.0.0"
