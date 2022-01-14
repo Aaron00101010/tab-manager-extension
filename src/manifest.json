@@ -4,10 +4,11 @@
   "version": "1.0",
   "manifest_version": 3,
   "omnibox": {
-    "keyword": "tab"
+    "keyword": "Tab Manager"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "action": {
     "default_popup": "index.html"

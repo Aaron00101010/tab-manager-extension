@@ -9,6 +9,15 @@ export interface TabGroup {
   tabs: TabItem[];
 }
 
+export type Theme = 'light' | 'dark' | 'system';
+export type Lang = 'EN' | 'CN';
+
+export interface StorageConfig {
+  lang: Lang;
+  theme: Theme;
+  tabs: TabGroup[];
+}
+
 declare global {
-  interface Sortable {}
+  var broswer: typeof chrome;
 }

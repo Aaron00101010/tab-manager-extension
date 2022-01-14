@@ -5,10 +5,12 @@ import copy from 'rollup-plugin-copy'
 import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 import { terser } from 'rollup-plugin-terser';
 
+const isDev = process.env.__DEV__ ?? false
 
 export default {
-  input: 'index.html',
+  input: ['index.html'],
   output: {
+    sourcemap: isDev,
     entryFileNames: '[hash].js',
     chunkFileNames: '[hash].js',
     assetFileNames: '[hash][extname]',
@@ -16,7 +18,7 @@ export default {
     dir: 'dist',
   },
   preserveEntrySignatures: false,
-
+  cache: true,
   plugins: [
     /** Enable using HTML as rollup entrypoint */
     html({
@@ -27,7 +29,7 @@ export default {
     /** Resolve bare module imports */
     nodeResolve(),
     /** Minify JS */
-    terser(),
+    isDev ? undefined : terser(),
     /** Bundle assets references via import.meta.url */
     importMetaAssets(),
     /** Compile JS to a lower language target */
@@ -68,7 +70,8 @@ export default {
     }),
     copy({
       targets: [
-        { src: "manifest.json", dest: "dist" }
+        { src: "src/manifest.json", dest: "dist" },
+        { src: "out-tsc/src/background.js", dest: "dist" }
       ]
     })
   ],
