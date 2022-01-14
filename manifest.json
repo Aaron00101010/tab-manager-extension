@@ -1,8 +1,11 @@
 {
-  "name": "Getting Started Example",
-  "description": "Tab Manager",
+  "name": "Tab Manager",
+  "description": "Easy to manage your tab group, fast switch or open tab group",
   "version": "1.0",
   "manifest_version": 3,
+  "omnibox": {
+    "keyword": "tab"
+  },
   "permissions": [
     "storage"
   ],
