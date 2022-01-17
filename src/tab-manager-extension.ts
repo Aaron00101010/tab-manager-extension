@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import { property, query, state, customElement } from 'lit/decorators.js';
+import { query, state, customElement } from 'lit/decorators.js';
 import './utils/vaddin';
 import { ColorScheme } from './utils/color-scheme';
 import { extension } from './service/browser-extension';

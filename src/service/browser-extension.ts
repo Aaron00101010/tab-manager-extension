@@ -1,4 +1,5 @@
 import type { StorageConfig, Lang, Theme } from '../typing';
+import browser from 'webextension-polyfill';
 
 export class BrowserExtension {
   STORAGE_KEY = 'STORAGE_CONFIG';
@@ -8,14 +9,12 @@ export class BrowserExtension {
     tabs: [],
   };
   constructor() {
-    broswer.storage.sync.get(this.STORAGE_KEY, config => {
+    browser.storage.sync.get(this.STORAGE_KEY).then(config => {
       this.config = { ...this.config, ...config.key };
     });
   }
   setConfig(config: any) {
-    broswer.storage.sync.set({ [this.STORAGE_KEY]: config }, () => {
-      console.log(233);
-    });
+    browser.storage.sync.set({ [this.STORAGE_KEY]: config });
   }
   getConfig() {
     console.log();

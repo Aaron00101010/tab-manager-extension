@@ -4,11 +4,13 @@ import html from '@web/rollup-plugin-html';
 import copy from 'rollup-plugin-copy'
 import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 import { terser } from 'rollup-plugin-terser';
+import commonjs from '@rollup/plugin-commonjs';
+
 
 const isDev = process.env.__DEV__ ?? false
 
 export default {
-  input: ['index.html'],
+  input: ['src/popup.html'],
   output: {
     sourcemap: isDev,
     entryFileNames: '[hash].js',
@@ -26,6 +28,7 @@ export default {
       injectServiceWorker: false,
       serviceWorkerPath: 'dist/sw.js',
     }),
+    commonjs(),
     /** Resolve bare module imports */
     nodeResolve(),
     /** Minify JS */

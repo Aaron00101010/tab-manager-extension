@@ -18,6 +18,6 @@ export interface StorageConfig {
   tabs: TabGroup[];
 }
 
-declare global {
-  var broswer: typeof chrome;
-}
+// declare global {
+//   var broswer: typeof chrome;
+// }
