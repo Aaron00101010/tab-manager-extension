@@ -11,11 +11,11 @@
     "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch\"",
     "storybook": "tsc && npm run analyze -- --exclude dist && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds -c .storybook/server.mjs\"",
     "storybook:build": "tsc && npm run analyze -- --exclude dist && build-storybook",
-    "build": "rimraf dist && tsc && rollup -c rollup.config.js && npm run analyze -- --exclude dist",
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
     "build:watch": "__DEV__=true npm-watch build",
-    "start:build": "web-dev-server --root-dir dist --app-index src/popup.html --open",
+    "start:build": "web-dev-server --root-dir dist --app-index popup.html --watch",
     "analyze": "cem analyze --litelement",
-    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
+    "start": "tsc && __DEV__=true concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
   },
   "watch": {
     "build": {

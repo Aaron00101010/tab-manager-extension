@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { query, state, customElement } from 'lit/decorators.js';
 import './utils/vaddin';
 import { ColorScheme } from './utils/color-scheme';
-import { extension } from './service/browser-extension';
+// import { extension } from './service/browser-extension';
 
 import './setting-sidebar';
 import './tab-group';
@@ -27,7 +27,6 @@ export class TabManagerExtension extends LitElement {
     if (this.colorScheme.isDark) {
       this.setAttribute('theme', 'dark');
     }
-    console.log(extension);
   }
 
   static styles = css`
